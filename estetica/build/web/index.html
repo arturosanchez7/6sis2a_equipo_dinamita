@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registro Alumnos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="csscrud.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div>
+            
+            <h1>Bienvenido a Estetica Dinamita </h1>
+            <br>
+            <form method="post" action="Guardar_Cita" name="formulario" >
+                <table border="1" >
+                    <tr> <td> Nombre:</td><td><input type="text" name="nombre"></td></tr>
+                     <tr> <td> Servicio:</td><td><input type="text" name="servicio"></td></tr>
+                      <tr> <td> Email:</td><td><input type="email" name="email"></td></tr>
+                              <tr> <td>Zona:</td><td>
+                                      <select name="zona" style="width: 150px">
+                                          <option>Insurgentes</option>
+                                          <option>Polanco</option>
+                                          <option>Cuauhtemoc</option>
+                                          <option>Zona Rosa</option>
+                                      </select>
+                          </td></tr>
+                              <tr><td colspan="2"> <input type="submit" value="Guardar Cita"></td></tr>
+                </table> 
+            </form>
+        </div>
+        
+        <div>
+            <a href="Consultar_Lista">Consultar Lista de Citas</a>
+        </div>
+        
+    </body>
+</html>
+

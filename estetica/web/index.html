@@ -10,31 +10,68 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="csscrud.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+	    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
     </head>
+
+    <style>
+         a{
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 200%;
+		}
+        h1{
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 200%;
+		}
+    </style>
+
     <body>
-        <div>
-            
-            <h1>Bienvenido a Estetica Dinamita </h1>
-            <br>
-            <form method="post" action="Guardar_Cita" name="formulario" >
-                <table border="1" >
-                    <tr> <td> Nombre:</td><td><input type="text" name="nombre"></td></tr>
-                     <tr> <td> Servicio:</td><td><input type="text" name="servicio"></td></tr>
-                      <tr> <td> Email:</td><td><input type="email" name="email"></td></tr>
-                              <tr> <td>Zona:</td><td>
-                                      <select name="zona" style="width: 150px">
-                                          <option>Insurgentes</option>
-                                          <option>Polanco</option>
-                                          <option>Cuauhtemoc</option>
-                                          <option>Zona Rosa</option>
-                                      </select>
-                          </td></tr>
-                              <tr><td colspan="2"> <input type="submit" value="Guardar Cita"></td></tr>
-                </table> 
-            </form>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <h1 href="" class="navbar-brand">
+                Bienvenido a Estetica Dinamita 
+            </h1>
+        </nav>  
+
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Agrega un registro</h4>
+                        </div>
+                        <form method="post" action="Guardar_Cita" name="formulario" class="card-body">
+                            <div class = "form-group">   
+                                <input type="text" name="nombre" placeholder="Nombre" class="form-control">
+                            </div > 
+
+                            <div class = "form-group">   
+                                <input type="text" name="servicio" placeholder="servicio" class="form-control">
+                            </div> 
+
+                            <div class = "form-group">   
+                                <input type="email" name="email" placeholder="email" class="form-control">
+                            </div> 
+
+                            <div class = "form-group">
+                                <label for = "exampleSelect1"> <font style = "vertical-alinear: heredar;"> <font style = "vertical-align: heredar;"> Zona </font> </font> </label>
+                                <select name="zona" class = "form-control">
+                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Insurgentes </font> </font> </option>
+                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Polanco </font> </font> </option>
+                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Cuauhtemoc </font> </font> </option>
+                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Zona Rosa </font> </font> </option>
+                                </select>
+                            </div>       
+                                <input type="submit" value="Guardar Cita" class="btn btn-primary btn-block">
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div>
+        <br>
+        <div class="card-header">
             <a href="Consultar_Lista">Consultar Lista de Citas</a>
         </div>
         

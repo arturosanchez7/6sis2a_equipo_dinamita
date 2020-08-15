@@ -4,77 +4,53 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <title>Registro Citas</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="csscrud.css" rel="stylesheet" type="text/css"/>
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-	    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
-	    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
-	    <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
-    </head>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="estilos.css">
+	
 
-    <style>
-         a{
-            font-family: 'Noto Sans JP', sans-serif;
-            font-size: 200%;
-		}
-        h1{
-            font-family: 'Noto Sans JP', sans-serif;
-            font-size: 200%;
-		}
-    </style>
-
-    <body>
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <h1 href="" class="navbar-brand">
-                Bienvenido a Estetica Dinamita 
-            </h1>
-        </nav>  
-
-        <div class="container">
-            <div class="row pt-5">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Agrega un registro</h4>
-                        </div>
-                        <form method="post" action="Guardar_Cita" name="formulario" class="card-body">
-                            <div class = "form-group">   
-                                <input type="text" name="nombre" placeholder="nombre" class="form-control">
-                            </div > 
-
-                            <div class = "form-group">   
-                                <input type="text" name="servicio" placeholder="servicio" class="form-control">
-                            </div> 
-
-                            <div class = "form-group">   
-                                <input type="email" name="email" placeholder="email" class="form-control">
-                            </div> 
-
-                            <div class = "form-group">
-                                <label for = "exampleSelect1"> <font style = "vertical-alinear: heredar;"> <font style = "vertical-align: heredar;"> Zona </font> </font> </label>
-                                <select name="zona" class = "form-control">
-                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Insurgentes </font> </font> </option>
-                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Polanco </font> </font> </option>
-                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Cuauhtemoc </font> </font> </option>
-                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Zona Rosa </font> </font> </option>
-                                </select>
-                            </div>       
-                                <input type="submit" value="Guardar Cita" class="btn btn-primary btn-block">
-                        </form>
-                    </div>
-                </div>
-            </div>
+</head>  
+<body>
+ <form class="formulario">
+    
+    <h1>Registrate</h1>
+    <div class="contenedor">
+     
+        <div class="input-contenedor">
+            <i class="fas fa-user icon"></i>
+            <input type="text" placeholder="Nombre Completo">
         </div>
-        <br>
-        <div class="card-header">
-            <a href="Consultar_Lista">Consultar Lista de Citas</a>
+         
+        <div class="input-contenedor">
+            <i class="fas fa-envelope icon"></i>
+            <input type="text" placeholder="Correo Electronico">
         </div>
-        
-    </body>
+
+        <div class="input-contenedor">
+            <i class="fas fa-mobile-alt"></i>
+            <input type="text" placeholder="Telefono">
+        </div>
+
+        <div class="input-contenedor">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" placeholder="Direccion">
+        </div>
+         
+        <div class="input-contenedor">
+            <i class="fas fa-key icon"></i>
+            <input type="password" placeholder="Contraseña">
+        </div>
+
+            <input type="submit" value="Registrate" class="button" href="registrocitas.html">
+            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+            <p>¿Ya tienes una cuenta?<a class="link" href="loginvista.html">Iniciar Sesion</a></p>
+    </div>
+    </form>
+    <br>
+    <br>
+</body>
 </html>
-

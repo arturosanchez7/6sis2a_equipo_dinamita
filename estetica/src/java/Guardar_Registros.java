@@ -28,10 +28,15 @@ public class Guardar_Registros extends HttpServlet {
              String nom_reg, correo_reg,tel_reg,direc_reg,contra_reg;
             
             nom_reg = request.getParameter("nombre");
+            System.out.println(nom_reg);
             correo_reg = request.getParameter("correo");
+            System.out.println(correo_reg);
             tel_reg = request.getParameter("telefono");
+            System.out.println(tel_reg);
             direc_reg = request.getParameter("direccion");
-            contra_reg = request.getParameter("contraseña");
+            System.out.println(direc_reg);
+            contra_reg = request.getParameter("contrasena");
+            System.out.println(contra_reg);
          Cita a = new Cita();
             
             a.setNombre(nom_reg);

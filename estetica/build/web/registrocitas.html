@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registro Citas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="eventos.js">
+        <link rel="stylesheet" href="lista.css">
+        <link href="csscrud.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
+    </head>
+
+    <style>
+         a{
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 200%;
+		}
+        h1{
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 200%;
+        }
+        p{
+            font-family: 'Bebas Neue', cursive;
+            font-size: 150%;
+        }
+    </style>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <h1 class="navbar-brand">
+                Bienvenido a Estetica Dinamita 
+            </h1>
+            <div class="consulta"> 
+                <a href="Consultar_Lista" style="color: aliceblue;">Consultar Lista de Citas</a>
+            </div>
+        </nav>  
+
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Agrega cita</h4>
+                        </div>
+                        <form method="post" action="Guardar_Cita" name="formulario" class="card-body">
+                            <div class = "form-group">   
+                                <input type="text" name="nombre" placeholder="nombre" class="form-control">
+                            </div > 
+
+                            <div class = "form-group">   
+                                <input type="text" name="servicio" placeholder="servicio" class="form-control">
+                            </div> 
+
+                            <div class = "form-group">   
+                                <input type="email" name="email" placeholder="email" class="form-control">
+                            </div> 
+
+                            <div class = "form-group">
+                                <label for = "exampleSelect1"> <font style = "vertical-alinear: heredar;"> <font style = "vertical-align: heredar;"> Zona </font> </font> </label>
+                                <select name="zona" class = "form-control">
+                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Insurgentes </font> </font> </option>
+                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Polanco </font> </font> </option>
+                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Cuauhtemoc </font> </font> </option>
+                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Zona Rosa </font> </font> </option>
+                                </select>
+                            </div>       
+                                <input type="submit" value="Guardar Cita" class="btn btn-primary btn-block">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="caja">
+
+            <div class="col-md-4">
+                    <input type="button" value="Mostrar lista" class="btn btn-primary btn-block" onclick="Mostrar()">
+                    <input type="button" value="Ocultar lista" class="btn btn-primary btn-block" onclick="Ocultar()">
+            </div>
+            <script type="text/javascript" src="eventos.js"></script>
+
+            <div id="MostrarOcultar">
+                <br>
+                <p>
+                    Premium Makeup de día------60 min------$1,400.00 <br>
+                    Premium Makeup con aerógrafo------70 min------$1,650.00 <br> 
+                    Premium Makeup de noche------80 min------$1,750.00 <br>
+                    Esmalte natural en manos------20 min------$340.00 <br> 
+                    Esmalte natural en pies------20 min------$350.00 <br>
+                    Gel en manos------40 min------$460.00 <br>
+                    Gel en pies------45 min------$480.00 <br>
+                    Manicure para caballero------30 min------$500.00 <br>
+                    Manicure------45 min------$500.00 <br>
+                    Pedicure para caballero------65 min------$520.00 <br>
+                    Pedicure------65 min------$520.00 <br>
+                    Gel en manos con decoración------60 min------$580.00 <br>
+                    Acrílico y gel en manos------60 min------$580.00 <br>
+                    Manicure gel------55 min------$580.00 <br>
+                    Pedicure gel------75 min------$620.00 <br>
+                    Gel en manos y pies------70 min------$650.00 <br>
+                    Manicure y pedicure para caballero------100 min------$720.00 <br>
+                    Manicure y pedicure------120 min------$720.00 <br>
+                    Manicure y pedicure gel------140 min------$880.00 <br>
+                    Estilizado de extensiones------35 min------$140.00 <br>
+                    Aplicación de pestañas------20 min------$210.00 <br>
+                    Alaciado con plancha------50 min------$490.00 <br>
+                    Moldeado con secadora------50 min------$490.00 <br>
+                    Ondas surfer------60 min------$490.00 <br>
+                    Ondas vintage------60 min------$490.00 <br>
+                    Peinado sencillo------45 min------$530.00 <br>
+                    Peinado recogido------60 min------$640.00 <br>
+                    Maquillaje de día sin pestañas------50 min------$800.00 <br>
+                    Maquillaje de día con pestañas------60 min------$920.00 <br>
+                    Alto peinado------60 min------$930.00 <br>
+                    Maquillaje de noche sin pestañas------50 min------$990.00 <br>
+                    Maquillaje de noche con pestañas------60 min------$1,160.00 <br>
+                    Estilizado de extensiones------35 min------$140.00 <br>
+                    Paquete maquillaje de día y Ondas------120 min------$1,150.00 <br>
+                    Paquete maquillaje de día y peinado recogido------120 min------$1,350.00 <br>
+                    Paquete maquillaje de noche y ondas------130 min------$1,380.00 <br>
+                    Paquete maquillaje de noche y peinado recogido------130 min------$1,600.00 <br>
+                    Corte individual------30 min------$490.00 <br>
+                    Paquete 2 cortes------50 min------$890.00 <br>
+                    Paquete 3 cortes------70 min------$1,090.00 <br>
+                    Paquete 4 cortes------90 min------$1,190.00 <br>
+                    Tratamiento de hidratación con Olaplex------30 min------$390.00 <br>                    
+                </p>
+            </div>
+        </div>
+        
+    </body>
+</html>
+
+

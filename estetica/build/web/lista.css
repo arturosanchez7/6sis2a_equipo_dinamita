@@ -1,0 +1,15 @@
+.caja {
+    position:absolute;
+    top: 110px;
+    bottom: 0px;
+    right: 0px;
+    left: 600px;
+}
+
+.consulta{
+    position: absolute;
+    top: 10px;
+    bottom: 0px;
+    right: 0px;
+    left: 600px;
+}

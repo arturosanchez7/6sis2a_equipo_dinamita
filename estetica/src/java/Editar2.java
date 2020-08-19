@@ -50,7 +50,7 @@ public class Editar2 extends HttpServlet {
               a.setZona(zona_cli);
               
               //ejecutar la query
-              int estatus = conexion.Guardar_Cita(a); 
+              int estatus = conexion.Editar_Cita(a); 
               
               if(estatus > 0){
                   response.sendRedirect("Consultar_Lista");
@@ -63,7 +63,7 @@ public class Editar2 extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Error al momento de obtener los datos</h1>"
-            +"<a href ='index.html'>Regresar al menú principal</a>");
+            +"<a href ='registrocitas.html'>Regresar al menú principal</a>");
             out.println("</body>");
             out.println("</html>");
               }

@@ -1,22 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Sara
+ * @author Administrador
  */
-@WebServlet(urlPatterns = {"/Editar_Cita"})
 public class Editar_Cita extends HttpServlet {
 
     /**
@@ -32,54 +24,51 @@ public class Editar_Cita extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+            
             int id;
             
             id = Integer.parseInt(request.getParameter("id"));
             
-            System.out.println(id);
+           Cita a = conexion.getCitaById(id);
             
-            
-            //obtener la busqueda del alumno por id
-           Cita a =  conexion.getAlumnoById(id);
-            
-            
+            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title> Editar Cita </title>");            
+            out.println("<title>Ficha de los del alumno</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Fichas para editar cita</h1>");
-            out.println("<form mehot ='get' name='formulario' action='Editar2'>");
+            out.println("<h1>Ficha de datos del alumno para editar </h1>");
+            out.println("<form mehotd='get' name'formulario' action='Editar2'>");
             out.println("<table border='1'>");
             out.println("<tr>"
-                    +"<td></td>"
-                    +"<td><input type='hidden' name='id2' value'"+a.getId()+"'</td>"
+                    + "<td></td>"
+                    + "<td><input type='hidden'  name='id2' value='"+a.getId()+"'</td>"
                     + "</tr>"
-                    +"<tr>"
-                    +"<td>Nombre:</td>"
-                    +"<td><input type='text' name='nombre2' value'"+a.getNombre()+"'</td>"
+                    + "<tr>"
+                    + "<td>Nombre:</td>"
+                    + "<td><input type='text'  name='nombre2' value='"+a.getNombre()+"'</td>"
                     + "</tr>"
-                    +"<tr>"
-                    +"<td>Servicio</td>"
-                    +"<td><input type='password' name='servicio2' value'"+a.getServicio()+"'</td>"
+                    + "<tr>"
+                    + "<td>Servicio:</td>"
+                    + "<td><input type='password'  name='servicio2' value='"+a.getServicio()+"'</td>"
                     + "</tr>"
-                    +"<tr>"
-                    +"<td>Email</td>"
-                    +"<td><input type='email' name='email2' value'"+a.getEmail()+"'</td>"
-                    + "<tr> <td>Zona: </td> <td><select name='zona2'>"
-                    +"<option>Insurgentes</option>"
-                    +"<option>Polanco</option>"
-                    +"<option>Cuahutemoc</option>"
-                    +"<option>Zona Rosa</option>"
-                    + "</select></td> </tr>"
-                    + "<tr><td colspan='2'><input type='submit' value='Editar datos' </td></tr>");
+                    + "<tr>"
+                    + "<td>Email:</td>"
+                    + "<td><input type='email'  name='email2' value='"+a.getEmail()+"'</td>"
+                    + "</tr>"
+                    + "<tr><td>Zona: </td><td><select name='zona2' >"
+                    + "<option>Insurgentes</option>"
+                    + "<option>Polanco</option>"
+                    + "<option>Cuauhtemoc</option>"
+                    + "<option>Zona Rosa</option>"
+                    + "</select></td></tr>"
+                    + "<tr><td colspan='2'><input type='submit' value ='Editar Datos'></td></tr>");
             out.println("</table>");
             out.println("</form>");
             out.println("</body>");
             out.println("</html>");
-        }        
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

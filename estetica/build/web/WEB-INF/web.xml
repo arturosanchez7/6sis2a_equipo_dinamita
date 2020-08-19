@@ -8,6 +8,14 @@
         <servlet-name>Guardar_Cita</servlet-name>
         <servlet-class>Guardar_Cita</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Consultar_Lista</servlet-name>
+        <servlet-class>Consultar_Lista</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Guardar_Registros</servlet-name>
+        <servlet-class>Guardar_Registros</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Guardar_Registro</servlet-name>
         <url-pattern>/Guardar_Registro</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>Guardar_Cita</servlet-name>
         <url-pattern>/Guardar_Cita</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Consultar_Lista</servlet-name>
+        <url-pattern>/Consultar_Lista</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Guardar_Registros</servlet-name>
+        <url-pattern>/Guardar_Registros</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

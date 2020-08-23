@@ -39,7 +39,8 @@ public class Editar_Cita extends HttpServlet {
             out.println("</head>");
             out.println("<style>");
             out.println("<body{>");
-            out.println("<background: url(mujer.jpg)>");
+            out.println("<background: url(mujer.jpg);>");
+            out.println("<background-repeat:no-repeat;>");
             out.println("</style>");
             out.println("<body>");
             out.println("<h1>Ficha de datos del alumno para editar </h1>");

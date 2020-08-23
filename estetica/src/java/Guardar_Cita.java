@@ -28,9 +28,13 @@ public class Guardar_Cita extends HttpServlet {
              String nom_cli, serv_cli, email_cli, zona_cli;
             
             nom_cli = request.getParameter("nombre");
+            System.out.println(nom_cli);
             serv_cli = request.getParameter("servicio");
+            System.out.println(serv_cli);
             email_cli = request.getParameter("email");
+            System.out.println(email_cli);
             zona_cli = request.getParameter("zona");
+            System.out.println(zona_cli);
             
          Cita a = new Cita();
             

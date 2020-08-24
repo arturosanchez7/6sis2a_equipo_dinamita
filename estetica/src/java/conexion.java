@@ -81,11 +81,11 @@ public class conexion {
          try {
              
              Connection con = conexion.getConnection();
-             String q = "update cita set nom_cli = ?"
+             String q = "update Cita set nom_cli = ?"
                      + "serv_cli = ?"
                      + "email_cli = ?"
                      + "zona_cli = ?"
-                     + "where id_cliente = ?";
+                     + "where id_cita = ?";
              
              
              PreparedStatement ps= con.prepareStatement(q);
@@ -94,7 +94,7 @@ public class conexion {
              ps.setString(2, a.getServicio());
              ps.setString(3, a.getEmail());
              ps.setString(4, a.getZona());
-             
+              ps.setInt(5, a.getId());
              estatus = ps.executeUpdate();
              
              con.close();
@@ -115,7 +115,7 @@ public class conexion {
          try {
              
              Connection con = conexion.getConnection();
-             String q = "delete from Cita where id_cliente";
+             String q = "delete from Cita where id_cita";
              
              
              PreparedStatement ps= con.prepareStatement(q);
@@ -142,7 +142,7 @@ public class conexion {
             
             Connection con = conexion.getConnection();
             
-            String q = "select * from Cita where id_cli = ?";
+            String q = "select * from cita where id_cita = ?";
             PreparedStatement ps = con.prepareStatement(q);
             
             ps.setInt(1, id);
@@ -218,17 +218,17 @@ public class conexion {
          try {
              
              Connection con = conexion.getConnection();
-             String q = "insert into cliente(nom_reg, correo_reg,tel_reg,direc_reg,contra_reg)"
+             String q = "insert into cliente(nom_reg, correo_reg,tel_reg,dire_reg,contra_reg)"
                      + "values(?,?,?,?,?)";
              
              
              PreparedStatement ps= con.prepareStatement(q);
              
-             ps.setString(1, a.getNombre());
+             ps.setString(1, a.getNombre2());
              ps.setString(2, a.getCorreo());
              ps.setString(3, a.getTelefono());
              ps.setString(4, a.getDireccion());
-             ps.setString(5, a.getContraseña());
+             ps.setString(5, a.getContrasena());
              
              estatus = ps.executeUpdate();
              

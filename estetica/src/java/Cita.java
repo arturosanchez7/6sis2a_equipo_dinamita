@@ -11,7 +11,7 @@
 public class Cita {
     
     private int id;
-    private String nombre, servicio,email, zona, correo,telefono,direccion,contraseña ;
+    private String nombre, servicio,email, zona, correo,telefono,direccion,contrasena,nombre2 ,email2;
 
     public int getId() {
         return id;
@@ -79,16 +79,27 @@ public class Cita {
         this.direccion = direccion;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
-    void setContrasena(String contra_reg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getNombre2() {
+        return nombre2;
     }
 
+    public void setNombre2(String nombre2) {
+        this.nombre2 = nombre2;
+    }
+    
+      public String getEmail2() {
+        return email2;
+    }
+
+    public void setEmail2(String nombre2) {
+        this.email2 = email2;
+    }
 }

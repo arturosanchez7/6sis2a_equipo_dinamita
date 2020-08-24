@@ -16,40 +16,41 @@ and open the template in the editor.
 
 </head>  
 <body>
-    <form class="formulario" >
+    <form  metod = "post" class="formulario" action="Guardar_Registros">
     
     <h1>Registrate</h1>
     <div class="contenedor">
      
         <div class="input-contenedor">
             <i class="fas fa-user icon"></i>
-            <input type="text" placeholder="Nombre Completo">
+            <input type="text" name="nombre2" placeholder="Nombre Completo">
         </div>
          
         <div class="input-contenedor">
             <i class="fas fa-envelope icon"></i>
-            <input type="text" placeholder="Correo Electronico">
+            <input type="text" name="correo" placeholder="Correo Electronico">
         </div>
 
         <div class="input-contenedor">
             <i class="fas fa-mobile-alt"></i>
-            <input type="text" placeholder="Telefono">
+            <input type="text"  name ="telefono" placeholder="Telefono">
         </div>
 
         <div class="input-contenedor">
             <i class="fas fa-map-marker-alt"></i>
-            <input type="text" placeholder="Direccion">
+            <input type="text"  name="direccion" placeholder="Direccion">
         </div>
          
         <div class="input-contenedor">
             <i class="fas fa-key icon"></i>
-            <input type="password" placeholder="Contraseña">
+            <input type="password" name="contrasena" placeholder="Contraseña">
         </div>
-
-            <a href="registrocitas.html"><input type="button" value="Registrate" class="button"></a>
+       
+            <input type="submit" value="Registrate" class="button">
             
             <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
             <p>¿Ya tienes una cuenta?<a class="link" href="loginvista.html">Iniciar Sesion</a></p>
+            
     </div>
     </form>
     <br>

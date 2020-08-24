@@ -45,7 +45,7 @@ public class Cancelar_Cita extends HttpServlet {
             
             System.out.println("Se ha cancelado su cita");
             
-           response.sendRedirect("index.html");
+           response.sendRedirect("registrocitas.html");
         }
     }
 

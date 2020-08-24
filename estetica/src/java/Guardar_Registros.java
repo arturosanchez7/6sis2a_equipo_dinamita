@@ -25,25 +25,21 @@ public class Guardar_Registros extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-             String nom_reg, correo_reg,tel_reg,direc_reg,contra_reg;
+             String nom_reg, correo_reg,tel_reg,dire_reg,contra_reg;
             
-            nom_reg = request.getParameter("nombre");
-            System.out.println(nom_reg);
+            nom_reg = request.getParameter("nombre2");
+                System.out.println(nom_reg);
             correo_reg = request.getParameter("correo");
-            System.out.println(correo_reg);
             tel_reg = request.getParameter("telefono");
-            System.out.println(tel_reg);
-            direc_reg = request.getParameter("direccion");
-            System.out.println(direc_reg);
+            dire_reg = request.getParameter("direccion");
             contra_reg = request.getParameter("contrasena");
-            System.out.println(contra_reg);
          Cita a = new Cita();
             
-            a.setNombre(nom_reg);
+            a.setNombre2(nom_reg);
             a.setCorreo(correo_reg);
             a.setTelefono(tel_reg);
-            a.setDireccion(direc_reg);
-            a.setContraseña(contra_reg);
+            a.setDireccion(dire_reg);
+            a.setContrasena(contra_reg);
             
             int estatus = conexion.Guardar_Registros(a);
             
